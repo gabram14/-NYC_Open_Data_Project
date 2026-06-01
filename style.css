@@ -1,0 +1,65 @@
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+   url(Ratatouille\ Pixar\ Kitchen.jpg);
+  height: 500%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.banner{
+  text-align: center;
+}
+
+nav{
+  padding:5px
+}
+
+nav a{
+  color:aliceblue;
+  margin:0 10px 0 10px;
+  display:inline-block;
+  width:30%;
+  text-align:center;
+  background-color: gold;
+}
+
+nav a :hover{
+ border-bottom: 2px soild black ;
+ }
+
+ a{
+  text-decoration: none;
+}
+
+#footer{
+  background-color:gold ;
+  color:black;
+  padding: 20px;
+}
+.one{
+  flex:1;
+  margin:10px;
+  padding:10px;
+  border:1px solid gray;
+  text-align:center;
+  background-color:rgb(228, 228, 46);
+}
+.three{
+  flex:1;
+  margin:10px;
+  padding:10px;
+  border:1px solid gray;
+  text-align:center;
+  background-color:rgb(228, 228, 46);
+}
+
+#two{
+  flex:1;
+  margin:10px;
+  padding:10px;
+  border:1px solid gray;
+  text-align:center;
+  background-color:rgb(129, 239, 149);
+}
