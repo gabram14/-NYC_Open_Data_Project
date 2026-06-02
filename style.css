@@ -63,3 +63,18 @@ nav a :hover{
   text-align:center;
   background-color:rgb(129, 239, 149);
 }
+
+.card{
+  flex:1;
+  margin:10px;
+  padding:10px;
+  border:1px solid gray;
+  text-align:center;
+  background-color: black;
+  color:white;
+}
+.container{
+  display:flex;
+  padding:px;
+  flex-wrap:wrap;
+}

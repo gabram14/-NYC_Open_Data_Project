@@ -1,67 +1,31 @@
 let data, info; // global variables
 
 async function init(){
-  
-  let link = "axux.json"; 
-  info = await fetch(link);
-  data = await info.json();
-  
-  //console.log(data);
+     let link = "axux.json";
+    info = await fetch(link);
+     data = await info.json();
 
-  let output = document.getElementById("output");
+    let leftPanel = get("leftPanel");
+    let build = "";
+
+    for(let i = 0; i < data.length; i++){
+    let crash = data[i];
+    build += card(crash);
+    }
+
+    leftPanel.innerHTML = build;  
+}
+
+function filterByBoro(){
+  leftPanel = get("leftPanel");
+  let boro = get("borough").value;
   let build = "";
-
-for()
-{
-       let build = `<div class="card fitted">
-                            <h3>${info.legal_restaurant_.name}</h3>
-                            <hr>
-                            <p>${Info.borough}</p>
-                            <p>${Info.business_address}</p>
-                            <p>${Info.latitude}</p>
-                            <hr>
-                            <p>${info.longitude}</p>
-                            <hr>
-                            <p>${Info.restaurant_inspection_id}</p>
-                            </div>`;
-
-       return build;
-}
   
-
-  output.innerHTML = build;
+  for(let i = 0; i < data.length; i++){
+      let complaint = data[i];
+      if (complaint.borough == boro){   
+        build += card(complaint);
+      }
+  }
+  leftPanel.innerHTML = build;
 }
-
-function filterBy(){
-  let output = document.getElementById("output");
-  let result = document.getElementById("result");
-
-  let borough = document.getElementById("borough").value;
-  
-  let build = "";
-  let ct = 0; 
-
- function card(  info ){
-       let build = `<div class="card fitted">
-                            <h3>${info.legal_restaurant_.name}</h3>
-                            <hr>
-                            <p>${Info.borough}</p>
-                            <p>${Info.business_address}</p>
-                            <p>${Info.latitude}</p>
-                            <hr>
-                            <p>${info.longitude}</p>
-                            <hr>
-                            <p>${Info.restaurant_inspection_id}</p>
-                            </div>`;
-
-       return build;
-}
-      ct += 1;
-
-  
-  result.innerHTML = `${ct} Results found.`
-  output.innerHTML = build;
-}
-
-
-

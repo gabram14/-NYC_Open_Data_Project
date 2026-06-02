@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <title>Resturant Data </title>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
-  </head>
- 
- <body>
-    <div class ="banner">
-   <div class ="hero-image">
-  <h1>Restaurant Inspections</h1>
-  </div>
-</div>
-<style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>NYC open data project</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="helper.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <style>
 body{
   
   background-color: rgb(15, 6, 7);
   color:aliceblue;
 }
 </style>
-<nav class ="container">
-    <a href ="index.html"> Homepage</a>
-    <a href ="cards.html">Index Cards</a>
-    <a href ="charts.html"> Charts and Maps</a>
-    </nav>
-   
-    <div class="part1">
-    <h3>Enter the borough from the Cards</h3>
-    <input type="text" id="box" placeholder="ENTER borough">
-    <input type ="button" value="Enter" onclick ="">
-    </div>
-    
-    
-    
-    <div id="footer" class="container">
-   <p>Restaurant Inspection By Gabriella AND  </p>
-    </div>
-  </body>
+
+    <body onload="init()"></body>
+    <body>
+        <nav class="container">
+        <a href="index.html"> Home </a>
+        <a href="info.html"> Info </a>
+        <a href="analysis.html"> Analysis </a>
+        </nav>
+
+        <div>
+            <input type="text" id="borough" placeholder="Enter borough" > &nbsp; <a class="button" onclick="filterByBoro()"> Search by Borough </a> 
+        </div>
+
+        <div id="output" class="container">
+            <div id="leftPanel" class="container"></div>
+        </div>
+
+    </body>
 </html>
+
