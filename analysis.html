@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <title>Resturant Data </title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+     <link href="c3.css" rel="stylesheet" type="text/css" />
+    <script src="c3.js"></script>
+    <script src="d3.js"></script>    
+    <script src="script.js"></script>
+  </head>
+ 
+ <body>
+    <div class ="banner">
+   <div class ="hero-image">
+  <h1>Restaurant Inspections</h1>
+  </div>
+</div>
+<style>
+body{
+  
+  background-color: rgb(15, 6, 7);
+  color:aliceblue;
+}
+</style>
+<nav class ="container">
+    <a href ="index.html"> Homepage</a>
+    <a href ="info.html">Index Cards</a>
+    <a href ="analysis.html"> Charts</a>
+    </nav>
+   
+   <div class="container">
+      <p><span class="highlight">Scenario:</span>Chart analyzes the number of complaints by boroughs.</p>
+      <select id="chartType" style="width:200px;">
+        <option>Select Chart Type</option>
+        <option value="line">Line</option>
+        <option value="bar">Bar</option>
+        <option value="pie">Pie</option>
+        <option value="donut">Donut</option>
+      </select>
+      <a class="button" onclick="complaintsByBorough()"> Display </a>
+    </div>
+    
+    <div id="footer" class="container">
+   <p>Restaurant Inspection By </p>
+    </div>
+  </body>
+</html>
