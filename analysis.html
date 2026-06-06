@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
+  <head>
     <title>Resturant Data </title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
      <link href="c3.css" rel="stylesheet" type="text/css" />
     <script src="c3.js"></script>
     <script src="d3.js"></script>    
     <script src="script.js"></script>
+    <script src="helper.js"></script>
   </head>
  
  <body>
     <div class ="banner">
-   <div class ="hero-image">
-  <h1>Restaurant Inspections</h1>
+      <div class ="hero-image">
+      <h1>Restaurant Inspections</h1>
+      </div>
   </div>
-</div>
-<style>
-body{
-  
-  background-color: rgb(15, 6, 7);
-  color:aliceblue;
-}
-</style>
+
 <nav class ="container">
     <a href ="index.html"> Homepage</a>
     <a href ="info.html">Index Cards</a>
@@ -36,8 +32,12 @@ body{
         <option value="pie">Pie</option>
         <option value="donut">Donut</option>
       </select>
-      <a class="button" onclick="complaintsByBorough()"> Display </a>
+      <a class="button" onclick="RestaurantsByBorough()"> Display </a>
     </div>
+    
+    <div class="container subbanner"><br></div>
+
+    <div id="output"> </div>
     
     <div id="footer" class="container">
    <p>Restaurant Inspection By </p>
